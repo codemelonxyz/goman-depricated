@@ -14,6 +14,7 @@ const version = "0.0.1"
 func main() {
     helpFlag := flag.Bool("h", false, "Display help")
     versionFlag := flag.Bool("v", false, "Display version")
+	contactFlag := flag.Bool("c", false, "Contact us")
 
     flag.Parse()
 
@@ -26,6 +27,11 @@ func main() {
         fmt.Println("Goman version", version)
         os.Exit(0)
     }
+
+	if *contactFlag {
+		utils.ContactDeveloper()
+		os.Exit(0)
+	}
 
     // Check for commands
     args := flag.Args()
@@ -52,6 +58,8 @@ func main() {
         err = commands.Purge()
     case "setup":
         err = commands.Setup()
+	case "details":
+		err = commands.Details(commandArgs, version)
     default:
         utils.PrintUsage()
         os.Exit(1)

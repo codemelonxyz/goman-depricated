@@ -29,6 +29,17 @@ func PrintUsage() {
 	fmt.Println("    -c 					   - Contact the developer")
 }
 
+
+func ContactDeveloper() {
+	fmt.Println(" ")
+	fmt.Println("Contact the developer at: support@codemelon.xyz")
+	fmt.Println("Contact the developer at: support.goman@codemelon.xyz")
+	fmt.Println("Contact the developer at: vaidityatanwar2207@gmail.com")
+	fmt.Println("                        or                           ")
+	fmt.Println("Visit our website at: https://codemelon.xyz")
+	fmt.Println(" ")
+}
+
 func UpdateShellConfig() error {
     // Get current user
     currentUser, err := user.Current()
