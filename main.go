@@ -7,6 +7,7 @@ import (
 
     "goman/commands"
     "goman/utils"
+	"goman/project"
 )
 
 const version = "0.0.1"
@@ -60,6 +61,8 @@ func main() {
         err = commands.Setup()
 	case "details":
 		err = commands.Details(commandArgs, version)
+	case "project":
+		err = project.ProjectHandler(commandArgs)
     default:
         utils.PrintUsage()
         os.Exit(1)

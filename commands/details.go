@@ -47,14 +47,16 @@ func Details(commandArgs []string, version string) error {
 	}
 
 
-	fmt.Println("")
-    fmt.Println("       Details of GoMan       ")
-	fmt.Println("")
-    fmt.Println("  --------------------------  ")
-    fmt.Println("  GoMan is a simple tool to manage Go versions on your system.")
-    fmt.Println("  Goman Version:", version)
-    fmt.Println("  --------------------------  ")
-	fmt.Println("")
+	if flags.a {
+		fmt.Println("")
+    	fmt.Println("       Details of GoMan       ")
+		fmt.Println("")
+    	fmt.Println("  --------------------------  ")
+    	fmt.Println("  GoMan is a simple tool to manage Go versions on your system.")
+    	fmt.Println("  Goman Version:", version)
+    	fmt.Println("  --------------------------  ")
+		fmt.Println("")
+	}
 
     
     // Add more details as needed
